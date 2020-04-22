@@ -5,7 +5,7 @@ function Leaderboard(props) {
     const pageFunc = "Leaderboard";
     const pageName = "Leaderboard";
     return(
-        <div className="dashboard conatainer">
+        <div className="leaderboard">
             <Header pageFunc={pageFunc} pageName={pageName}/>
             <div className="dashboard panel">
 

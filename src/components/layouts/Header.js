@@ -5,8 +5,8 @@ function Header(props){
     const {pageFunc, pageName} = props
     return(
         <div>
-            <div class="nav-wrapper header white valign-wrapper ">
-            <div class="container ">
+            <div className="nav-wrapper header white valign-wrapper ">
+            <div className="container ">
                 <h6 className="grey-text text-lighten-1">{pageFunc}</h6>
                 <h5 className="black-text"><b>{pageName}</b></h5>
                 <h4></h4>

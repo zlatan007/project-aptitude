@@ -1,0 +1,47 @@
+.skill-card{
+    padding: 0 !important;
+    padding-right: 4rem !important;
+}
+.progress {
+    background-color: lightblue;
+}
+.progress .determinate {
+    background-color: royalblue;
+}
+.skill-card-badge{
+    position: absolute;
+    right: -0.5rem;
+    top: -0.5rem;
+}
+
+.hexagon-badge {
+    width: 100px;
+    height: 55px;
+    background: teal;
+    position: relative;
+    margin: 10px auto;
+}
+
+.hexagon-badge:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid teal;
+}
+
+.hexagon-badge:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid teal;
+}
