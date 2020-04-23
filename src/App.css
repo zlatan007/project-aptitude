@@ -2,3 +2,18 @@ body{
     background-color: #f3f7f7;
     /* font: 10px Verdana, Arial, sans-serif; */
 }
+.container {
+    margin: 0 auto;
+    max-width: 1280px !important;
+    width: 79% !important;
+}
+@media only screen and (min-width: 601px) {
+    .container {
+      width: 74% ;
+    }
+}
+@media only screen and (min-width: 993px) {
+    .container {
+      width: 69% ;
+    }
+}

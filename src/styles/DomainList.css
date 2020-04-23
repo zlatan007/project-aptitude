@@ -1,0 +1,15 @@
+.domain-list{
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+    padding: 0 !important;
+}
+
+.domain-list-card{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.domain-list-card>.col{
+    border: 1px solid lightgray;
+    border-left: 0;
+    border-top: 0;
+}

@@ -11,7 +11,6 @@ function SignedInLinks(props){
             'coverTrigger': false
         }
         var instances = M.Dropdown.init(dropdown_elems, dropdown_options);
-        console.log(instances)
         var sidebar_elems = document.querySelectorAll('.sidenav');
         var sidebar_options = {
 
@@ -47,7 +46,7 @@ function SignedInLinks(props){
                     <div className={"nav-wrapper "+baseColor+" darken-2 "}>
                         <form>
                         <div className="input-field">
-                            <input id="search" type="search" required/>
+                            <input id="search" type="search" placeholder="Search" required/>
                             <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
                             <i className={"material-icons "+baseColor+"-text"}>close</i>
                         </div>
