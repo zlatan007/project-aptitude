@@ -47,7 +47,7 @@ function SignedInLinks(props){
                         <form>
                         <div className="input-field">
                             <input id="search" type="search" placeholder="Search" required/>
-                            <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
+                            <label className="label-icon" htmlFor=""><i className="material-icons">search</i></label>
                             <i className={"material-icons "+baseColor+"-text"}>close</i>
                         </div>
                         </form>

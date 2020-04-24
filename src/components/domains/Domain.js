@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../layouts/Header';
+import DomainContent from './DomainContent';
 
 function Domain(props){
     console.log(props.match.params.domain_name)
@@ -8,7 +9,7 @@ function Domain(props){
     return(
         <div>  
             <Header pageLoc={pageLoc} pageName={pageName}/>
-
+            <DomainContent />
         </div>
     )
 }
