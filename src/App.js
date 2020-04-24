@@ -1,10 +1,21 @@
 import React from 'react';
-import './App.css';
+import Homepage from './Home/Homepage-component/Homepage'
+import Login from './Home/Homepage-component/Navbar-component/Login'
+import Signup from './Home/Homepage-component/Navbar-component/Signup'
+import { BrowserRouter,Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <p>Go corona go</p>
+    <div>
+      
+      <BrowserRouter>
+         
+         <Route exact path="/" component={Homepage}/>
+         <Route exact path="/login" component={Login}/>
+         <Route exact path="/signup" component={Signup}/>
+
+      </BrowserRouter>
+       
     </div>
   );
 }

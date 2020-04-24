@@ -1,0 +1,52 @@
+.modal { width: 30% !important ; 
+         height: 75% !important ;
+         background-color:whitegray !important;
+       }
+
+.hcss{
+    background-color:#f4f4f4;
+    color:black;
+}
+
+.marginofemail{
+    padding-top:0px;
+    padding-bottom:0px;
+}
+
+.marginofpassword{
+    padding-bottom:0px;
+    padding-top:0px;
+}*/
+
+
+.marginupside{
+    padding-top:0px;
+}
+
+.modal-content{
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px;
+}
+
+.ppadding{
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.labelpadding{
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.spanpadding{
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
