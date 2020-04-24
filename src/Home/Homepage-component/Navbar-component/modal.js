@@ -44,7 +44,7 @@ class Modal extends Component {
 
         <div ref={Modal => { this.Modal = Modal;}} id="modal1" className="modal">
        
-          <div className="model-header">
+          <div className="modal-header">
                 <div className="hcss">
                   <h3 className="center darken-3 ">Log In</h3>
                     <hr></hr>
@@ -52,25 +52,17 @@ class Modal extends Component {
           </div>
 
           <div className="modal-content ">
-              <div class="row">
-                <form class="col s12">
-
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <input placeholder="Your Username and email" id="first_name" type="text" class="validate"/>
+              <div class="">
+                <form action="#">
+                    <div class="input-field">
+                      <input placeholder="Your Username and email" id="first_name" type="text"/>
                       <label for="email">Email</label>
                     </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <input placeholder="Password" id="password" type="password" class="validate"/>
+                    <div class="input-field">
+                      <input placeholder="Password" id="password" type="password"/>
                       <label for="password">Password</label>
                     </div>
-                  </div>
-
-                    <div className="row">
-                      <div className="col s12">
+                      <div className="">
                         <div className="left">
                             <p className="ppadding">
                               <label className="labelpadding">
@@ -80,8 +72,6 @@ class Modal extends Component {
                             </p>
                         </div>
                       </div>
-                    </div>
-
                 </form>
               </div>
 
