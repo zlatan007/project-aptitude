@@ -69,6 +69,8 @@ class Modal extends Component {
                     </div>
                   </div>
 
+
+
                     <div className="row">
                       <div className="col s12">
                         <div className="left">
@@ -81,6 +83,16 @@ class Modal extends Component {
                         </div>
                       </div>
                     </div>
+                    
+                    <div class>
+                        <a className="modal-close waves-effect waves-light btn">
+                          Cancel
+                        </a>
+                        <a className="modal-close waves-effect waves-light btn">
+                          Log in
+                      </a>
+                    </div>
+                     
 
                 </form>
               </div>
@@ -91,12 +103,7 @@ class Modal extends Component {
        
             
             <div className="modal-footer">
-              <a className="modal-close waves-effect waves-light btn">
-                Cancel
-              </a>
-              <a className="modal-close waves-effect waves-light btn">
-                Log in
-              </a>
+              
             </div>
 
 
