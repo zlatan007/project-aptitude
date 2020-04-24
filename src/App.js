@@ -1,22 +1,26 @@
 import React from 'react';
-import Homepage from './Home/Homepage-component/Homepage'
-import Login from './Home/Homepage-component/Navbar-component/Login'
-import Signup from './Home/Homepage-component/Navbar-component/Signup'
-import { BrowserRouter,Route} from 'react-router-dom'
+import './App.css';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Navbar from './components/layouts/Navbar';
+import 'materialize-css/dist/css/materialize.min.css';
+import Dashboard from './components/dashboard/Dashboard';
+import Leaderboard from './components/leaderboard/Leaderboard';
+import Domain from './components/domains/Domain';
 
 function App() {
   return (
-    <div>
-      
-      <BrowserRouter>
-         
-         <Route exact path="/" component={Homepage}/>
-         <Route exact path="/login" component={Login}/>
-         <Route exact path="/signup" component={Signup}/>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar/>
+        <Switch>
+          <Route exact path="/" component={Dashboard}/>
+          <Route path="/dashboard" component={Dashboard}/>
+          <Route path="/leaderboard" component={Leaderboard}/>
+          <Route path="/domain/:domain_name" component={Domain} />
+        </Switch>
+      </div>
+    </BrowserRouter>
 
-      </BrowserRouter>
-       
-    </div>
   );
 }
 
