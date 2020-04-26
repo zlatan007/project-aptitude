@@ -1,5 +1,5 @@
-import React,{useEffect} from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React,{useEffect} from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import M from 'materialize-css';
 
 function SignedInLinks(props){

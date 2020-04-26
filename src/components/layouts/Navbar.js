@@ -11,7 +11,7 @@ function Navbar(){
             <div className="container">
                 <Link to="/" className="brand-logo">Project A</Link>
                 <SignedInLinks baseColor={baseColor}/>
-                {/* <SignedOutLinks/> */}
+                {/* <SignedOutLinks baseColor={baseColor}/> */}
             </div>
         </nav>
     )

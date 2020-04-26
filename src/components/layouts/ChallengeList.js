@@ -8,7 +8,9 @@ function ChallengeList(){
         "challenge_title": "Challenge Title",
         "max_score" : "10",
         "success_rate": "90",
-        "status" : "unsolved"
+        "status" : "unsolved",
+        "slug": "challenge-1",
+        "category": "Quantitative"
     }
     const titleTypeTwo = {
         "difficulty": "1.5",
@@ -16,7 +18,8 @@ function ChallengeList(){
         "challenge_title": "Challenge Title",
         "max_score" : "20",
         "success_rate": "87.88",
-        "status" : "solved"
+        "status" : "solved",
+        "slug": "challenge-2"
     }
     const titleTypeThree = {
         "difficulty": "3.0",
@@ -24,7 +27,8 @@ function ChallengeList(){
         "challenge_title": "Challenge Title",
         "max_score" : "50",
         "success_rate": "57.88",
-        "status" : "unsolved"
+        "status" : "unsolved",
+        "slug": "challenge-3"
     }
     return(
         <div>
