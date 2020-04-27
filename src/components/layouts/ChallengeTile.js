@@ -31,7 +31,7 @@ function ChallengeTile(props){
     }
 
     return(
-        <NavLink to={"/challenge/"+challengeDetail.slug} className="black-text">
+        <NavLink to={"/challenge/"+challengeDetail.slug+"/problem"} className="black-text">
             <div className="card hoverable">
                 <div className="card-content row" >
                     <div className="col s12 m9">

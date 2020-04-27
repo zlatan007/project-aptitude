@@ -1,55 +1,21 @@
 import React from 'react';
 import ChallengeTile from '../layouts/ChallengeTile';
+import {connect} from 'react-redux';
 
-function ChallengeList(){
-    const titleTypeOne = {
-        "difficulty": "0.9",
-        "difficulty_name" : "Easy",
-        "challenge_title": "Challenge Title",
-        "max_score" : "10",
-        "success_rate": "90",
-        "status" : "unsolved",
-        "slug": "challenge-1",
-        "category": "Quantitative"
-    }
-    const titleTypeTwo = {
-        "difficulty": "1.5",
-        "difficulty_name" : "Medium",
-        "challenge_title": "Challenge Title",
-        "max_score" : "20",
-        "success_rate": "87.88",
-        "status" : "solved",
-        "slug": "challenge-2"
-    }
-    const titleTypeThree = {
-        "difficulty": "3.0",
-        "difficulty_name" : "Hard",
-        "challenge_title": "Challenge Title",
-        "max_score" : "50",
-        "success_rate": "57.88",
-        "status" : "unsolved",
-        "slug": "challenge-3"
-    }
+function ChallengeList(props){
+    const {challengesList} = props
+    // console.log(challengesList[0])
     return(
         <div>
-            <ChallengeTile challengeDetail={titleTypeTwo}/>
-            <ChallengeTile challengeDetail={titleTypeOne}/>
-            <ChallengeTile challengeDetail={titleTypeTwo}/>
-            <ChallengeTile challengeDetail={titleTypeThree}/>
-            <ChallengeTile challengeDetail={titleTypeTwo}/>
-            <ChallengeTile challengeDetail={titleTypeOne}/>
-            <ChallengeTile challengeDetail={titleTypeTwo}/>
-            <ChallengeTile challengeDetail={titleTypeThree}/>
-            <ChallengeTile challengeDetail={titleTypeTwo}/>
-            <ChallengeTile challengeDetail={titleTypeOne}/>
-            <ChallengeTile challengeDetail={titleTypeTwo}/>
-            <ChallengeTile challengeDetail={titleTypeThree}/>
-            <ChallengeTile challengeDetail={titleTypeTwo}/>
-            <ChallengeTile challengeDetail={titleTypeOne}/>
-            <ChallengeTile challengeDetail={titleTypeTwo}/>
-            <ChallengeTile challengeDetail={titleTypeThree}/>
+            <ChallengeTile challengeDetail={challengesList[0]}/>
+            <ChallengeTile challengeDetail={challengesList[1]}/>
+            <ChallengeTile challengeDetail={challengesList[2]}/>
         </div>
     )
 }
-
-export default ChallengeList;
+const mapStateToProps = (state) => {
+    return {
+        challengesList: state.quant.challenges
+    }
+}
+export default connect(mapStateToProps)(ChallengeList);

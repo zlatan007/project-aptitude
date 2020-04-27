@@ -20,7 +20,7 @@ function ChallengeProblem(props){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e);
+        // console.log(e);
     }
 
 
@@ -39,17 +39,7 @@ function ChallengeProblem(props){
                         <div  className = "col s12 m9">
                             <div className="card z-depth-1" style={{"marginTop":"0px"}}>
                                 <div className="card-content" >
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, saepe corrupti eaque architecto excepturi ipsa, ullam possimus provident accusamus animi nihil laudantium, optio assumenda rem enim eveniet alias quia doloribus!</p>
-                                    <br></br>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, saepe corrupti eaque architecto excepturi ipsa, ullam possimus provident accusamus animi nihil laudantium, optio assumenda rem enim eveniet alias quia doloribus!</p>
-                                    <br></br>
-                                    <div className="divider"></div>
-                                    <br></br>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, saepe corrupti eaque architecto excepturi ipsa, ullam possimus provident accusamus animi nihil laudantium, optio assumenda rem enim eveniet alias quia doloribus!</p>
-                                    <br></br>
-                                    <p><b>Example:</b></p>
-                                    <br></br>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, saepe corrupti eaque architecto excepturi ipsa, ullam possimus provident accusamus animi nihil laudantium, optio assumenda rem enim eveniet alias quia doloribus!</p>
+                                    {challengeDetail.challenge_statement}
                                 </div>
                             </div>
                         </div>
@@ -76,25 +66,25 @@ function ChallengeProblem(props){
                                         <p>
                                         <label className="black-text">
                                             <input className="with-gap" name="group1" type="radio" id="option-1"/>
-                                            <span>Option 1</span>
+                                            <span>{challengeDetail.options.option1}</span>
                                         </label>
                                         </p>
                                         <p>
                                         <label className="black-text">
                                             <input className="with-gap" name="group1" type="radio" id="option-2" />
-                                            <span>Option 2</span>
+                                            <span>{challengeDetail.options.option2}</span>
                                         </label>
                                         </p>
                                         <p>
                                         <label className="black-text">
                                             <input className="with-gap" name="group1" type="radio" id="option-3"/>
-                                            <span>Option 3</span>
+                                            <span>{challengeDetail.options.option3}</span>
                                         </label>
                                         </p>
                                         <p>
                                         <label className="black-text">
                                             <input className="with-gap" name="group1" type="radio" id="option-4"/>
-                                            <span>Option 4</span>
+                                            <span>{challengeDetail.options.option4}</span>
                                         </label>
                                         </p>
                                         <div className="right-align">
