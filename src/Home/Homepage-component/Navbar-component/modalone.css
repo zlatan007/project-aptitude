@@ -1,6 +1,7 @@
 .modal { width: 30% !important ; 
-    height: 75% !important ;
+    /* height: 75% !important ; */
     background-color:whitegray !important;
+    max-height:120vw !important;
   }
 
 .hcss1{
@@ -8,7 +9,38 @@ background-color:#f4f4f4;
 color:black;
 }
 
-.marginofemail1{
+.modal-content{
+  padding-top:0px;
+  padding-bottom:10px !important;
+  margin-top:0px;
+}
+
+input{
+  border-bottom:1.8px solid #26a69a !important;
+}
+
+.hr{
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+}
+
+
+.lineconnectone{
+  padding-top:25px !important;
+}
+
+.model-content{
+  padding:2%;
+}
+
+.connect{
+  color:grey !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+
+/* .marginofemail1{
 padding-top:0px;
 padding-bottom:0px;
 }
@@ -21,7 +53,7 @@ padding-top:0px;
 
 .marginupside1{
 padding-top:100px;
-}
+} */
 
 
 

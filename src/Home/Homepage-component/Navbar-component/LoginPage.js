@@ -1,79 +1,32 @@
-import React, { Component } from "react";
-import './modal.css'
-import M from "materialize-css";
-import "materialize-css/dist/css/materialize.min.css";
+import React from 'react';
 import facebook from '../../../images/facebook.png';
 import google from '../../../images/google.png';
 import linkdln from '../../../images/linkdln.png';
 import github from '../../../images/github.png';
 
 
-class Modal extends Component {
-  componentDidMount() {
-    const options = {
-      onOpenStart: () => {
-        console.log("Open Start");
-      },
-      onOpenEnd: () => {
-        console.log("Open End");
-      },
-      onCloseStart: () => {
-        console.log("Close Start");
-      },
-      onCloseEnd: () => {
-        console.log("Close End");
-      },
+function LoginPage(){
+    return(
+        <div className="container">
+              <div className="row" style={{"marginTop":"60px"}}>
+                <form className="col s12 m6 offset-m3">
 
-      inDuration: 250,
-      outDuration: 250,
-      opacity: 0.8,
-      dismissible: false,
-      startingTop: "50%",
-      endingTop: "12%"
-    };
-    M.Modal.init(this.Modal, options);
-
-    // let instance = M.Modal.getInstance(this.Modal);
-    // instance.open();
-    // instance.close();
-    // instance.destroy();
-  }
-
-  render() {
-    return (
-      <div>
-        <a className=" modal-trigger" data-target="modal1">Login</a>
-        
-
-        <div ref={Modal => { this.Modal = Modal;}} id="modal1" className="modal">
-       
-          {/* <div className="model-header"> */}
-                <div className="hcss">
-                  <h3 className="center #f4f4f4 darken-3 ">Log In</h3>
-                    <hr></hr>
-                </div>
-          {/* </div> */}
-
-          <div className="modal-content ">
-              <div class="row">
-                {/* <form class="col s12"> */}
-
-                    <div class="input-field col s12">
-                      <input placeholder="Your Username and email" id="first_name" type="text" class="validate"/>
+                    <div className="input-field col s12">
+                      <input placeholder="Your Username and email" id="first_name" type="text" className="validate"/>
                       <label classname="colorthing" for="email">Email</label>
                       
                     </div>
 
-                    <div class="input-field col s12">
-                      <input placeholder="Password" id="password" type="password" class="validate"/>
-                      <label for="password">Password</label>
+                    <div className="input-field col s12">
+                      <input placeholder="Password" id="password" type="password" className="validate"/>
+                      <label htmlFor="password">Password</label>
                     </div>
 
                       <div className="col s12">
                         <div className="left">
                             <p className="ppadding">
                               <label className="labelpadding">
-                                <input type="checkbox" class="filled-in"  />
+                                <input type="checkbox" className="filled-in"  />
                                 <span className="spanpadding">Remember me</span>
                               </label>
                             </p>
@@ -81,28 +34,24 @@ class Modal extends Component {
                       </div>
                     
                     
-                    {/* <div className="row"> */}
-                      <div className="col s12">
-                        <div className="right hr">
+                      <div className="right-align">
                           <a className="modal-close waves-effect waves-light btn">
                             Log in
                           </a>
-                        </div>  
                       </div>
-                    {/* </div> */}
                     
 
-                    <div className="row">
+                    <div className="row valign-wrapper" style={{"marginTop":"30px"}}>
 
-                        <div className="col s4 hide-on-small-and-down lineconnect">
+                        <div className="col s4 hide-on-small-and-down ">
                           <hr></hr>
                         </div>
 
-                        <div className="col s4 center connect">
+                        <div className="col s4 center">
                           or connect with
                         </div>
 
-                        <div className="col s4 hide-on-small-and-down lineconnect">
+                        <div className="col s4 hide-on-small-and-down ">
                           <hr></hr>
                         </div>
                       </div>
@@ -133,15 +82,12 @@ class Modal extends Component {
 
                     {/* </div>                      */}
 
-                {/* </form> */}
+                </form>
               </div>
 
           </div>
-
-          </div>
-      </div>
-    );
-  }
+    )
 }
 
-export default Modal;
+
+export default LoginPage;

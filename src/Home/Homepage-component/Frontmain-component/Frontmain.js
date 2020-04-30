@@ -11,7 +11,7 @@ class Mainfront extends Component{
                   
                </div>
                <div className="col s6">
-                  <img class="materialboxed" width="650" src={Coolimages} alt="this is good" />
+                   
                </div>
            </div>
         )
