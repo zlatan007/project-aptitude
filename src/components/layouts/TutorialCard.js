@@ -16,7 +16,7 @@ function TutorialCard(){
                     <span className="grey-text">Learn quantitative, qualitative, verbal, reasoning and more.</span>
                     <br></br>
                     <br></br>
-                    <NavLink to="/" className="blue-text text-darken-3">Start Tutorial</NavLink>
+                    <NavLink to="#" className="blue-text text-darken-3">Start Tutorial</NavLink>
                 </div>
             </div>
         </div>

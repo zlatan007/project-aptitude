@@ -23,7 +23,7 @@ function SkillCard(){
                     </div>
                     <p>25%<span className="grey-text"> (29/115 Challenges Solved)</span></p>
                     <br></br>
-                    <NavLink to="/" className="waves-effect blue darken-3 waves-light btn-large">Continue Practice</NavLink>
+                    <NavLink to="#" className="waves-effect blue darken-3 waves-light btn-large">Continue Practice</NavLink>
                     <Badges/>
                 </div>
             </div>

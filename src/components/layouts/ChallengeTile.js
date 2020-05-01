@@ -31,11 +31,11 @@ function ChallengeTile(props){
     }
 
     return(
-        <NavLink to="#" className="black-text">
+        <NavLink to={"/challenge/"+challengeDetail.slug+"/problem"} className="black-text">
             <div className="card hoverable">
-                <div className="card-content row">
+                <div className="card-content row" >
                     <div className="col s12 m9">
-                        <span className="card-title">{challengeDetail.challenge_title}</span>
+                        <span className="card-title"><b>{challengeDetail.challenge_title}</b></span>
                         <p className="grey-text"><span className={getDifficultyColor(challengeDetail.difficulty_name)+"-text"}>{challengeDetail.difficulty_name}</span>, Max Score: {challengeDetail.max_score}, Success Rate: {challengeDetail.success_rate}%</p>
                     </div>
                     <div className="col s12 m3">
