@@ -57,16 +57,15 @@ class Modal extends Component {
 
           <div className="modal-content ">
               <div class="row">
-                <form class="col s12">
+                <form  class="col s12">
 
                     <div class="input-field col s12">
-                      <input placeholder="Your Username and email" id="first_name" type="text" class="validate"/>
-                      <label classname="colorthing" for="email">Email</label>
-                      
+                      <input placeholder="Your email" type="email" id="email" />
+                      <label classname="colorthing" htmlFor="email">Email</label>
                     </div>
 
                     <div class="input-field col s12">
-                      <input placeholder="Password" id="password" type="password" class="validate"/>
+                      <input placeholder="Password" id="password" type="password" />
                       <label for="password">Password</label>
                     </div>
                     
@@ -92,11 +91,11 @@ class Modal extends Component {
                     
                     
                     {/* <div className="row"> */}
-                      <div className="col s12">
+                      <div className="input-field col s12">
                         <div className="right hr">
-                          <a className="modal-close waves-effect waves-light btn">
+                          <button className="modal-close waves-effect waves-light btn">
                             Log in
-                          </a>
+                          </button>
                         </div>  
                       </div>
                     {/* </div> */}

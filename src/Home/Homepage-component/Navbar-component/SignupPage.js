@@ -1,14 +1,12 @@
 import React,{Component} from 'react';
-import './modal.css'
-import M from "materialize-css";
-import "materialize-css/dist/css/materialize.min.css";
+import './model.css';
 import facebook from '../../../images/facebook.png';
 import google from '../../../images/google.png';
 import linkdln from '../../../images/linkdln.png';
 import github from '../../../images/github.png';
 
 
-class LoginPage extends Component{
+class SignupPage extends Component{
     render()
     {
     return(
@@ -102,4 +100,4 @@ class LoginPage extends Component{
 }
 }
 
-export default LoginPage;
+export default SignupPage;
