@@ -9,7 +9,7 @@ function DomainContent(){
     return(
         <div className="container">
             <div className="row">
-                <ChallengePane/>
+                <ChallengePane />
                 <FilterPane/>
             </div>
         </div>

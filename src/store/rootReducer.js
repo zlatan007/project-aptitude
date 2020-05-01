@@ -1,8 +1,14 @@
 import {combineReducers} from 'redux';
-import quantitativeReducer from './quantitativeReducer';
+import submitChallengeReducer from './submitChallengeReducer';
+import uploadChallengeReducer from './uploadChallengeReducer';
+import {firestoreReducer} from 'redux-firestore';
+import getChallengesReducer from './getChallengesReducer';
 
 const rootReducer = combineReducers({
-    quant: quantitativeReducer
+    challenge: submitChallengeReducer,
+    upload: uploadChallengeReducer,
+    firestore: firestoreReducer,
+    getChallenge: getChallengesReducer
 });
 
 export default rootReducer;

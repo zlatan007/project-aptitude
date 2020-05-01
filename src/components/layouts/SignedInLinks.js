@@ -21,9 +21,9 @@ function SignedInLinks(props){
     <div>
         <Link to="/" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
         <ul id="profile-dropdown" className="dropdown-content">
-            <li><Link to="/">Profile</Link></li>
+            <li><Link to="#">Profile</Link></li>
             <li className="divider"></li>
-            <li><Link to="/">Logout</Link></li>
+            <li><Link to="#">Logout</Link></li>
         </ul>
         <ul className={"sidenav "+baseColor+" darken-3"} id="mobile-demo">
             <li><h1></h1></li>
@@ -32,9 +32,9 @@ function SignedInLinks(props){
             <li><h1></h1></li>
             <li><NavLink to='/dashboard'>Practice</NavLink></li>
             <li><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
-            <li><NavLink to='/'>Notifications</NavLink></li>
-            <li><NavLink to='/'>Profile</NavLink></li>
-            <li><NavLink to='/'>Log Out</NavLink></li>
+            <li><NavLink to='#'>Notifications</NavLink></li>
+            <li><NavLink to='#'>Profile</NavLink></li>
+            <li><NavLink to='#'>Log Out</NavLink></li>
         </ul>
         {/* <ul className="left hide-on-med-and-down">
             <li><NavLink to='/'>Practice</NavLink></li>
@@ -56,7 +56,7 @@ function SignedInLinks(props){
             </li>
             <li><NavLink to='/dashboard'>Practice</NavLink></li>
             <li><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
-            <li><NavLink to='/'>Notifications</NavLink></li>
+            <li><NavLink to='#'>Notifications</NavLink></li>
             <li><NavLink className="dropdown-trigger btn btn-floating pink lighten-1" to="/" data-target="profile-dropdown">AK<i className="material-icons right">arrow_drop_down</i></NavLink></li>
         </ul>
     </div>

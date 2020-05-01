@@ -7,12 +7,12 @@ function Domain(props){
     return (
             <div className="col s12 m4 domain-list-card">
                 <div className="hoverable">
-                <Link className="black-text" to={domainDetail.to}>
+                <a className="black-text" href={domainDetail.to}>
                     <div className="card-content valign-wrapper">
                         <img src={require("../../assets/domain-icons/"+icon)} alt="" width="27" height="27"></img>
                         <span style={{paddingLeft: "1rem"}}><b> {domainDetail.domain_name}</b></span>
                     </div>
-                </Link>
+                </a>
                 </div>
             </div>
     )

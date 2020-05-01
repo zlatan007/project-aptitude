@@ -9,6 +9,7 @@ import Leaderboard from './components/leaderboard/Leaderboard';
 import Domain from './components/domains/Domain';
 import ChallengeRedirect from './components/layouts/ChallengeRedirect';
 import ChallengeProblemPage from './components/layouts/ChallengeProblemPage';
+import PageNotFound from './components/layouts/PageNotFound';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/domain/:domain_name" component={Domain} />
           <Route path="/challenge/:challenge_slug/problem" component={ChallengeProblemPage} />
           <Route path="/challenge/:challenge_slug" component={ChallengeRedirect} />
+          <Route exact path='*' component={PageNotFound} />
         </Switch>
       </div>
     </BrowserRouter>

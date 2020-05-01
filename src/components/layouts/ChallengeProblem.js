@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../styles/Tabs.css';
+import {submitChallenge} from '../../store/actions/challengeActions';
+import {connect} from 'react-redux';
+import {uploadChallenge} from '../../store/actions/uploadChallengeActions';
 
 function ChallengeProblem(props){
     const {challengeDetail} = props;
+
+    const [userAnswer, setUserAnswer] = useState(null);
+
     const getDifficultyColor = (difficulty) =>{
         if(difficulty === "Easy"){
             return "green"
@@ -18,12 +24,26 @@ function ChallengeProblem(props){
         }
     }
 
+    const handleChange = (e) => {
+        setUserAnswer(e.target.value)
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log(e);
+        if(userAnswer !== null){
+            props.submitChallenge(challengeDetail, userAnswer);
+            // props.uploadChallenge();
+        }
     }
 
+    if(challengeDetail === undefined){
+        return (
+            <div>
 
+            </div>
+        )
+    }else{
     return(
         <div className="container">
                 <div className = "row" style={{"paddingTop":"2rem","marginBottom":"0"}}>
@@ -38,8 +58,8 @@ function ChallengeProblem(props){
                     <div className="row">
                         <div  className = "col s12 m9">
                             <div className="card z-depth-1" style={{"marginTop":"0px"}}>
-                                <div className="card-content" >
-                                    {challengeDetail.challenge_statement}
+                                <div className="card-content" dangerouslySetInnerHTML={{__html:challengeDetail.challenge_statement}}>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -65,26 +85,26 @@ function ChallengeProblem(props){
                                     <form onSubmit={handleSubmit}>
                                         <p>
                                         <label className="black-text">
-                                            <input className="with-gap" name="group1" type="radio" id="option-1"/>
-                                            <span>{challengeDetail.options.option1}</span>
+                                            <input className="with-gap" name="group1" type="radio" id="option-1" value={challengeDetail.options.option1} onChange={handleChange}/>
+                                            <span>A) {challengeDetail.options.option1}</span>
                                         </label>
                                         </p>
                                         <p>
                                         <label className="black-text">
-                                            <input className="with-gap" name="group1" type="radio" id="option-2" />
-                                            <span>{challengeDetail.options.option2}</span>
+                                            <input className="with-gap" name="group1" type="radio" id="option-2" value={challengeDetail.options.option2} onChange={handleChange}/>
+                                            <span>B) {challengeDetail.options.option2}</span>
                                         </label>
                                         </p>
                                         <p>
                                         <label className="black-text">
-                                            <input className="with-gap" name="group1" type="radio" id="option-3"/>
-                                            <span>{challengeDetail.options.option3}</span>
+                                            <input className="with-gap" name="group1" type="radio" id="option-3" value={challengeDetail.options.option3} onChange={handleChange}/>
+                                            <span>C) {challengeDetail.options.option3}</span>
                                         </label>
                                         </p>
                                         <p>
                                         <label className="black-text">
-                                            <input className="with-gap" name="group1" type="radio" id="option-4"/>
-                                            <span>{challengeDetail.options.option4}</span>
+                                            <input className="with-gap" name="group1" type="radio" id="option-4" value={challengeDetail.options.option4} onChange={handleChange}/>
+                                            <span>D) {challengeDetail.options.option4}</span>
                                         </label>
                                         </p>
                                         <div className="right-align">
@@ -109,6 +129,14 @@ function ChallengeProblem(props){
                 </div>
             </div>
     )
+    }
 }
 
-export default ChallengeProblem;
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        submitChallenge: (challengeDetail, answer) => dispatch(submitChallenge(challengeDetail, answer)),
+        uploadChallenge: () => dispatch(uploadChallenge())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ChallengeProblem);
