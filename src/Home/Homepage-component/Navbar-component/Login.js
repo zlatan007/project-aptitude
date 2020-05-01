@@ -10,7 +10,6 @@ class Login extends Component {
             <Modal>
               
             </Modal>
-           
          </div>
        )
      }

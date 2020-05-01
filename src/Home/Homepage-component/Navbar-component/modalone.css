@@ -1,7 +1,7 @@
 .modal { width: 30% !important ; 
     /* height: 75% !important ; */
     background-color:whitegray !important;
-    max-height:120vw !important;
+    max-height:150vw !important;
   }
 
 .hcss1{
@@ -55,5 +55,7 @@ padding-top:0px;
 padding-top:100px;
 } */
 
-
+.adjust{
+  padding-bottom:10px;
+}
 

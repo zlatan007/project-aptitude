@@ -6,6 +6,7 @@ import facebook from '../../../images/facebook.png';
 import google from '../../../images/google.png';
 import linkdln from '../../../images/linkdln.png';
 import github from '../../../images/github.png';
+import {Link,Navlink} from 'react-router-dom';
 
 
 class Modal extends Component {
@@ -56,7 +57,7 @@ class Modal extends Component {
 
           <div className="modal-content ">
               <div class="row">
-                {/* <form class="col s12"> */}
+                <form class="col s12">
 
                     <div class="input-field col s12">
                       <input placeholder="Your Username and email" id="first_name" type="text" class="validate"/>
@@ -68,8 +69,9 @@ class Modal extends Component {
                       <input placeholder="Password" id="password" type="password" class="validate"/>
                       <label for="password">Password</label>
                     </div>
-
-                      <div className="col s12">
+                    
+                    
+                      <div className="col s6">
                         <div className="left">
                             <p className="ppadding">
                               <label className="labelpadding">
@@ -78,6 +80,14 @@ class Modal extends Component {
                               </label>
                             </p>
                         </div>
+                      </div>
+
+                      <div className="col s6 ">
+                        {/* <div className="right-align"> */}
+                          <a href="/" className="sized">
+                            Forgot your password?
+                          </a>
+                        {/* </div> */}
                       </div>
                     
                     
@@ -109,31 +119,39 @@ class Modal extends Component {
                     
                         <div className="col s3">
                           <div className="center">
-                            <img className="materialboxed"  length="44" width="44" src={facebook} alt="this is good" />
+                            <Link to="/" className="changed">
+                              <img className="materialboxed"  length="44" width="44" src={facebook} alt="this is good" />
+                            </ Link>
                           </div>
                         </div>
 
                         <div className="col s3">
                           <div className="center">
-                            <img className="materialboxed"  length="44" width="44" src={google} alt="this is good" />
+                            <Link to="/" className="changed">
+                                <img className="materialboxed"  length="44" width="44" src={google} alt="this is good" />
+                            </Link>
                           </div>
                         </div>
 
                         <div className="col s3">
-                          <div className="center">
-                            <img className="materialboxed"  length="44" width="44" src={linkdln} alt="this is good" />
+                          <div className="right">
+                            <Link to="/" className="changed">
+                              <img className="materialboxed"  length="44" width="44" src={linkdln} alt="this is good" />
+                            </Link>
                           </div>
                         </div>
 
                         <div className="col s3">
-                          <div className="center">
-                            <img className="materialboxed"  length="44" width="44" src={github} alt="this is good" />
+                          <div className="right">
+                            <Link to="" className="changed">
+                              <img className="materialboxed"  length="44" width="44" src={github} alt="this is good" />
+                            </Link>
                           </div>
                         </div>
 
                     {/* </div>                      */}
 
-                {/* </form> */}
+                </form>
               </div>
 
           </div>

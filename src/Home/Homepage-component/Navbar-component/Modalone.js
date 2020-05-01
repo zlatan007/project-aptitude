@@ -58,7 +58,7 @@ class Modalone extends Component {
 
           <div className="modal-content ">
               <div class="row">
-                {/* <form class="col s12"> */}
+                <form class="col s12">
                 
                       {/* <div className="marginofemail1"> */}
                         <div class="input-field col s12">
@@ -85,53 +85,55 @@ class Modalone extends Component {
                           </div>
                       </div>
                     
-                      <div className="col s12">
-                        <div className="right hr">
+                      
+                        <div className="right-align">
                           <a className="modal-close waves-effect waves-light btn">
                             Sign in
                           </a>
                         </div>  
-                      </div>
-
+                      
+                    <div className="row">
                       <div className="col s4 lineconnectone">
                           <hr></hr>
                         </div>
 
-                        <div className="col s4 center connect">
+                        <div className="col s4  connect">
                           or connect with
                         </div>
 
                         <div className="col s4 lineconnectone">
                           <hr></hr>
                         </div>
-                    
-                      
-                        <div className="col s3">
-                          <div className="center">
-                          <img className="materialboxed"  length="50" width="50" src={facebook} alt="this is good" />
-                          </div>
-                        </div>
+                      </div>
 
-                        {/* <div className="col s3">
+
+                      <div className="row">
+                        <div className="col s3">
+                         
+                          <img className="materialboxed "  length="44" width="44" src={facebook} alt="this is good" />
+                          </div>
+                        
+
+                        <div className="col s3">
                         <div className="center">
                           <img className="materialboxed"  length="50" width="50" src={google} alt="this is good" />
                           </div>
-                        </div> */}
+                        </div>
 
-                        {/* <div className="col s3">
+                        <div className="col s3">
                         <div className="center">
                           <img className="materialboxed"  length="55" width="55" src={linkdln} alt="this is good" />
                           </div>
-                        </div> */}
+                        </div>
 
-                        {/* <div className="col s3">
+                        <div className="col s3">
                         <div className="center">
                           <img className="materialboxed"  length="50" width="50" src={github} alt="this is good" />
                           </div>
-                        </div> */}
-                      
+                        </div>
+                        </div>
 
-                {/* </form> */}
+                </form>
               </div>
 
                 
