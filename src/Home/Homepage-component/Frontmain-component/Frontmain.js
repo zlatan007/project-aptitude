@@ -8,7 +8,7 @@ class Mainfront extends Component{
         return(
            <div className="row">
                <div className="col s6">
-                  
+                   
                </div>
                <div className="col s6">
                    

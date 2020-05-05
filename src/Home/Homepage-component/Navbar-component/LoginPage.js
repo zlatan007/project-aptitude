@@ -9,24 +9,40 @@ import github from '../../../images/github.png';
 
 
 class LoginPage extends Component{
+    state={
+      email:'',
+      password:''
+    }
+
+    handleChange = (e) =>{
+        this.setState({
+          [e.target.id]: e.target.value
+        })
+    }
+
+    handleSubmit = (e) =>{
+        e.preventDefault();
+        console.log(this.state);
+    }
+
     render()
     {
     return(
         <div className="container">
-              <div className="row" style={{"marginTop":"60px"}}>
-                <form className=" col s12 m6 offset-m3">
-
+              <div className="row" style={{"marginTop":"0px"}}>
+              <h3 className="center">Log In</h3>
+                <form onSubmit={this.handleSubmit} className=" col s12 m6 offset-m3">
                     <div className="input-field col s12">
-                        <input placeholder="Your email" type="email" id="email" />
-                        <label classname="colorthing" htmlFor="email">Email</label>
+                        <input placeholder="" type="email" id="email" onChange={this.handleChange} />
+                        <label className="colorthing" htmlFor="email">Email</label>
                     </div>
 
                     <div className="input-field col s12">
-                    <input placeholder="Password" id="password" type="password" />
-                      <label htmlFor="password">Password</label>
+                      <input placeholder="" id="password" type="password" onChange={this.handleChange}/>
+                      <label  className="colorthing" htmlFor="password">Password</label>
                     </div>
 
-                      <div className="col s12">
+                      <div className="col s6">
                         <div className="left">
                             <p className="ppadding">
                               <label className="labelpadding">
@@ -48,7 +64,7 @@ class LoginPage extends Component{
                     
                       <div className="right-align">
                           <button className="modal-close waves-effect waves-light btn">
-                            Log in
+                            Login
                           </button>
                       </div>
                     
