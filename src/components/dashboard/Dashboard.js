@@ -13,16 +13,13 @@ class Dashboard extends Component{
                </div>
                <div className="col s6">
                    
+                   
                </div>
            </div>
         )
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        projects: state.project.projects
-    }
-}
 
-export default connect(mapStateToProps)(Dashboard)
+
+export default Dashboard

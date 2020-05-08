@@ -6,6 +6,11 @@ import facebook from '../../../images/facebook.png';
 import google from '../../../images/google.png';
 import linkdln from '../../../images/linkdln.png';
 import github from '../../../images/github.png';
+import { connect } from 'react-redux'
+import { signIn } from '../../../components/store/actions/authActions'
+import {Redirect} from 'react-router-dom';
+import Dash from './Dash';
+
 
 
 class LoginPage extends Component{
@@ -22,11 +27,14 @@ class LoginPage extends Component{
 
     handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(this.state);
+        this.props.signIn(this.state)
     }
 
     render()
     {
+      const { authError,auth} = this.props;
+      if (auth.uid)return <Redirect to="/dash"></Redirect>
+
     return(
         <div className="container">
               <div className="row" style={{"marginTop":"0px"}}>
@@ -111,11 +119,32 @@ class LoginPage extends Component{
                     {/* </div>                      */}
 
                 </form>
+
+                <div className="red-text center">
+              { authError ? <p>{authError}</p> : null  }
               </div>
 
+              </div>
+              
+             
           </div>
     )
 }
 }
 
-export default LoginPage;
+const mapStateToProps = (state) => {
+  return{
+    authError: state.auth.authError,
+    auth: state.firebase.auth
+    
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signIn: (creds) => dispatch(signIn(creds))
+  }
+}
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(LoginPage);
