@@ -1,11 +1,16 @@
 import React,{Component} from 'react';
-import './modal.css';
+import './modal.css'
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 import facebook from '../../../images/facebook.png';
 import google from '../../../images/google.png';
 import linkdln from '../../../images/linkdln.png';
 import github from '../../../images/github.png';
+import { connect } from 'react-redux'
+import { signUp } from '../../../components/store/actions/authActions'
+import {Homepage} from '../../Homepage-component/Homepage'
+import {Redirect} from 'react-router-dom';
+
 
 
 class SignupPage extends Component{
@@ -25,11 +30,13 @@ class SignupPage extends Component{
   
       handleSubmit = (e) =>{
           e.preventDefault();
-          console.log(this.state);
+          this.props.signUp(this.state);
       }
 
     render()
     {
+     const { auth,authError } = this.props
+    //  if(auth.uid) return <Redirect to= "/" />
     return(
         <div className="container">
               <div className="row" style={{"marginTop":"0px"}}>
@@ -102,8 +109,9 @@ class SignupPage extends Component{
                           </div>
                         </div>
 
-                    {/* </div>                      */}
-
+                        <div className="red-text center">
+                          {authError ? <p>{authError}</p>: null}
+                        </div>
                 </form>
               </div>
 
@@ -112,4 +120,18 @@ class SignupPage extends Component{
 }
 }
 
-export default SignupPage;
+
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth,
+    authError: state.auth.authError
+  }
+}
+
+const mapDispatchToProps = (dispatch)=> {
+  return {
+    signUp: (newUser) => dispatch(signUp(newUser))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignupPage)

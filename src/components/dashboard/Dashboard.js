@@ -13,12 +13,14 @@ class Dashboard extends Component{
                </div>
                <div className="col s6">
                    
+                   
                </div>
            </div>
         )
     }
 }
 
+<<<<<<< HEAD
 const mapStateToProps = (state) => {
     return {
         projects: state.project.projects
@@ -26,3 +28,8 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Dashboard)
+=======
+
+
+export default Dashboard
+>>>>>>> 71e0cb6be1f2580306273d2852f370932fb7ee29
