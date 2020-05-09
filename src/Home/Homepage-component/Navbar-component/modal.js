@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import './modal.css'
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
-
+import facebook from '../../../images/facebook.png';
+import google from '../../../images/google.png';
+import linkdln from '../../../images/linkdln.png';
+import github from '../../../images/github.png';
+import {Link,Navlink} from 'react-router-dom';
 
 
 class Modal extends Component {
@@ -23,7 +27,7 @@ class Modal extends Component {
 
       inDuration: 250,
       outDuration: 250,
-      opacity: 0.7,
+      opacity: 0.8,
       dismissible: false,
       startingTop: "50%",
       endingTop: "12%"
@@ -44,25 +48,29 @@ class Modal extends Component {
 
         <div ref={Modal => { this.Modal = Modal;}} id="modal1" className="modal">
        
-          <div className="modal-header">
+          {/* <div className="model-header"> */}
                 <div className="hcss">
-                  <h3 className="center darken-3 ">Log In</h3>
+                  <h3 className="center #f4f4f4 darken-3 ">Log In</h3>
                     <hr></hr>
                 </div>
-          </div>
+          {/* </div> */}
 
           <div className="modal-content ">
-              <div class="">
-                <form action="#">
-                    <div class="input-field">
-                      <input placeholder="Your Username and email" id="first_name" type="text"/>
-                      <label for="email">Email</label>
+              <div class="row">
+                <form  class="col s12">
+
+                    <div class="input-field col s12">
+                      <input placeholder="Your email" type="email" id="email" />
+                      <label classname="colorthing" htmlFor="email">Email</label>
                     </div>
-                    <div class="input-field">
-                      <input placeholder="Password" id="password" type="password"/>
+
+                    <div class="input-field col s12">
+                      <input placeholder="Password" id="password" type="password" />
                       <label for="password">Password</label>
                     </div>
-                      <div className="">
+                    
+                    
+                      <div className="col s6">
                         <div className="left">
                             <p className="ppadding">
                               <label className="labelpadding">
@@ -72,23 +80,80 @@ class Modal extends Component {
                             </p>
                         </div>
                       </div>
+
+                      <div className="col s6 ">
+                        {/* <div className="right-align"> */}
+                          <a href="/" className="sized">
+                            Forgot your password?
+                          </a>
+                        {/* </div> */}
+                      </div>
+                    
+                    
+                    {/* <div className="row"> */}
+                      <div className="input-field col s12">
+                        <div className="right hr">
+                          <button className="modal-close waves-effect waves-light btn">
+                            Log in
+                          </button>
+                        </div>  
+                      </div>
+                    {/* </div> */}
+                    
+
+                    <div className="row">
+
+                        <div className="col s4 hide-on-small-and-down lineconnect">
+                          <hr></hr>
+                        </div>
+
+                        <div className="col s4 center connect">
+                          or connect with
+                        </div>
+
+                        <div className="col s4 hide-on-small-and-down lineconnect">
+                          <hr></hr>
+                        </div>
+                      </div>
+                    
+                        <div className="col s3">
+                          <div className="center">
+                            <Link to="/" className="changed">
+                              <img className="materialboxed"  length="44" width="44" src={facebook} alt="this is good" />
+                            </ Link>
+                          </div>
+                        </div>
+
+                        <div className="col s3">
+                          <div className="center">
+                            <Link to="/" className="changed">
+                                <img className="materialboxed"  length="44" width="44" src={google} alt="this is good" />
+                            </Link>
+                          </div>
+                        </div>
+
+                        <div className="col s3">
+                          <div className="right">
+                            <Link to="/" className="changed">
+                              <img className="materialboxed"  length="44" width="44" src={linkdln} alt="this is good" />
+                            </Link>
+                          </div>
+                        </div>
+
+                        <div className="col s3">
+                          <div className="right">
+                            <Link to="" className="changed">
+                              <img className="materialboxed"  length="44" width="44" src={github} alt="this is good" />
+                            </Link>
+                          </div>
+                        </div>
+
+                    {/* </div>                      */}
+
                 </form>
               </div>
 
-                
-
           </div>
-       
-            
-            <div className="modal-footer">
-              <a className="modal-close waves-effect waves-light btn">
-                Cancel
-              </a>
-              <a className="modal-close waves-effect waves-light btn">
-                Log in
-              </a>
-            </div>
-
 
           </div>
       </div>
