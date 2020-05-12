@@ -5,11 +5,21 @@ import SkillList from './SkillList';
 import DomainsList from './DomainsList';
 import TutorialList from './TutorialList';
 
+import { connect } from 'react-redux'
+import LoginPage from '../homepagecomponent/authpages/LoginPage';
+import { signOut } from '../../store/actions/authActions'
+import {Redirect} from 'react-router-dom';
+
 function Dashboard(props) {
     var {prev_location} = props;
     prev_location===undefined ? prev_location = "" : prev_location= prev_location;
     const pageLoc = prev_location+"Practice";
     const pageName = "Dashboard";
+
+    const { authError,auth} = props;
+        if (!auth.uid)return <Redirect to="/login"></Redirect>
+
+
     return(
         <div className="dashboard">
             <Header pageLoc={pageLoc} pageName={pageName}/>
@@ -29,9 +39,28 @@ function Dashboard(props) {
                     <br></br>
                     <TutorialList/>
                 </div>
+
+                
+
             </div>
         </div>
     )
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => {
+    return{
+      authError: state.auth.authError,
+      auth: state.firebase.auth
+    }
+  }
+
+  const mapDispatchToProps = (dispatch) => {
+    return {
+      signOut: () => dispatch(signOut())
+    }
+  }
+  
+ 
+
+
+ export default connect(mapStateToProps,mapDispatchToProps)(Dashboard);

@@ -1,9 +1,16 @@
 import React,{useEffect} from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import M from 'materialize-css';
+import { connect } from 'react-redux'
+// import LoginPage from './LoginPage';
+import {signOut} from '../../store/actions/authActions'
+import {Redirect} from 'react-router-dom';
+
 
 function SignedInLinks(props){
     const {baseColor} = props;
+    // const { authError,auth} = props;
+    // if (!auth.uid)return <Redirect to="/login"></Redirect>
     useEffect(() => {
         var dropdown_elems = document.querySelectorAll('.dropdown-trigger');
         var dropdown_options = {
@@ -17,13 +24,16 @@ function SignedInLinks(props){
         }
         var instances = M.Sidenav.init(sidebar_elems, sidebar_options);
     },[])
+
+    // const { authError,auth} = props;
+    // if (!auth.uid)return <Redirect to="/login"></Redirect>
   return (
     <div>
         <Link to="/" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
         <ul id="profile-dropdown" className="dropdown-content">
             <li><Link to="#">Profile</Link></li>
             <li className="divider"></li>
-            <li><Link to="#">Logout</Link></li>
+            <li><Link to="/home" onClick={props.signOut}>Logout</Link></li>
         </ul>
         <ul className={"sidenav "+baseColor+" darken-3"} id="mobile-demo">
             <li><h1></h1></li>
@@ -63,4 +73,21 @@ function SignedInLinks(props){
   )
 }
 
-export default SignedInLinks
+// const mapStateToProps = (state) => {
+//     return{
+//       authError: state.auth.authError,
+//       auth: state.firebase.auth
+//     }
+//   }
+
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+      signOut: () => dispatch(signOut())
+    }
+  }
+  
+  export default connect(null,mapDispatchToProps)(SignedInLinks)
+
+
+// export default SignedInLinks
