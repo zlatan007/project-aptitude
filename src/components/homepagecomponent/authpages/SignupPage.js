@@ -11,7 +11,8 @@ import '../../../styles/LoginPage.css'
 import { signUp } from '../../../store/actions/authActions'
 // import {Homepage} from '../../Homepage-component/Homepage'
 import {Redirect} from 'react-router-dom';
-// import Dash from './Dash';
+import Navbarone from '../navbarcomponent/Navbarone';
+
 
 
 
@@ -40,6 +41,8 @@ class SignupPage extends Component{
      const { auth,authError } = this.props
      if(auth.uid) return <Redirect to= "/dashboard" />
     return(
+       <div>
+           <Navbarone/>
         <div className="container">
               <div className="row" style={{"marginTop":"0px"}}>
               <h3 className="center">Sign In</h3>
@@ -116,7 +119,7 @@ class SignupPage extends Component{
                         </div>
                 </form>
               </div>
-
+           </div>
           </div>
     )
 }

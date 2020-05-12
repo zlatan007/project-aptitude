@@ -21,6 +21,7 @@ function App() {
       <div className="App">
         <Navbar/>
         <Switch>
+          <Route exact path="/" component={Homepage}/>
           <Route exact path="/home" component={Homepage}/>
           <Route path="/dashboard" component={Dashboard}/>
           <Route path="/leaderboard" component={Leaderboard}/>
