@@ -36,7 +36,7 @@ class SignupPage extends Component{
     render()
     {
      const { auth,authError } = this.props
-    //  if(auth.uid) return <Redirect to= "/" />
+     if(auth.uid) return <Redirect to= "/dash" />
     return(
         <div className="container">
               <div className="row" style={{"marginTop":"0px"}}>

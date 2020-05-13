@@ -19,11 +19,11 @@ export const signIn = (credentials) => {
       const firebase = getFirebase();
   
       firebase.auth().signOut().then(() => {
-          console.log("signout success");
-          
-        // dispatch({ type: 'SIGNOUT_SUCCESS' })
-      }).catch((e)=>{
-          console.log("signout error");
+        // console.log("signout success");
+        dispatch({ type: 'SIGNOUT_SUCCESS' })
+      }).catch((err)=>{
+          // console.log("signout error");
+          dispatch({ type: 'SIGNUP_ERROR' , err})
       })
     }
   }

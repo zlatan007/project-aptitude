@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom'
-import LoginPage from './LoginPage';
-import SignupPage from './SignupPage';
-// import Dash from './Dash';
-import { connect } from 'react-redux'
-import Dashboard from '../../../components/dashboard/Dashboard';
-import {Redirect} from 'react-router-dom';
+import { Link } from 'react-router-dom'
+// import LoginPage from './LoginPage';
+// import SignupPage from './SignupPage';
+// // import Dash from './Dash';
+// import { connect } from 'react-redux'
+// import Dashboard from '../../../components/dashboard/Dashboard';
+// import {Redirect} from 'react-router-dom';
 
 
 
