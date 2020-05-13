@@ -14,12 +14,12 @@ function SignedInLinks(props){
             'closeOnClick': true,
             'coverTrigger': false
         }
-        var instances = M.Dropdown.init(dropdown_elems, dropdown_options);
+        var instances = M.Dropdown.init(dropdown_elems, dropdown_options); // eslint-disable-line no-unused-vars
         var sidebar_elems = document.querySelectorAll('.sidenav');
         var sidebar_options = {
 
         }
-        var instances = M.Sidenav.init(sidebar_elems, sidebar_options);
+        var instances = M.Sidenav.init(sidebar_elems, sidebar_options); // eslint-disable-line no-redeclare
     },[])
 
   return (
@@ -31,10 +31,10 @@ function SignedInLinks(props){
             <li><Link to="/home" onClick={props.signOut}>Logout</Link></li>
         </ul>
         <ul className={"sidenav "+baseColor+" darken-3"} id="mobile-demo">
-            <li><h1></h1></li>
+            <li><br></br></li>
             <li><div className="center"><NavLink className="btn-large btn-floating pink lighten-1 waves-effect center" to="/">AK</NavLink></div></li>
             <li><h5 className="center">Anand Kumar</h5></li>
-            <li><h1></h1></li>
+            <li><br></br></li>
             <li><NavLink to='/dashboard'>Practice</NavLink></li>
             <li><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
             <li><NavLink to='#'>Notifications</NavLink></li>

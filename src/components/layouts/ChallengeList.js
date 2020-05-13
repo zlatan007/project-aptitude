@@ -3,10 +3,10 @@ import ChallengeTile from '../layouts/ChallengeTile';
 import {connect} from 'react-redux';
 import {compose} from 'redux';
 import {getChallenges} from '../../store/actions/getChallengeAction';
-import loader from '../../assets/spin_loader.gif';
+import spinner from '../../assets/spin_loader.gif';
 
 function ChallengeList(props){
-    var {challengesList} = props;
+    var {getChallenges, challengesList} = props;
     let collection = null;
     const [loading, setloading] = useState(true)
     switch(window.location.pathname.split('/')[2]){
@@ -28,27 +28,40 @@ function ChallengeList(props){
         default:
             collection = null;
     }
-    // console.log(collection)
+
     useEffect(() => {
-        props.getChallenges(collection)
-        // console.log("challenge: ",ChallengeList)
-        setloading(false)
-    }, [props])
+        async function getData(){
+            await setTimeout(async () => {
+                
+                await getChallenges(collection);
+                
+                console.log('removing spinner'); 
+                setloading(false);
+            }, 100);
+        }
+        getData();
+    }, [collection, getChallenges])
 
-
-    return(
-        <div>
-            {challengesList && challengesList.map(challenge => {
-                return(
-                    <ChallengeTile challengeDetail={challenge} key={challenge.slug}/>
-                )
-            })}
-            {loading && loader}
-        </div>
-    )
+    if(loading){
+        return (
+            <div className="center">
+                <img src={spinner} height="60" width="60" alt="spinner"/>
+            </div>
+        )
+    }else{
+        return(
+            <div>
+                {challengesList && challengesList.map(challenge => {
+                    return(
+                        <ChallengeTile challengeDetail={challenge} key={challenge.slug}/>
+                    )
+                })}
+            </div>
+        )
+    }
+    
 }
 const mapStateToProps = (state) => {
-    // console.log(state)
     return {
         challengesList: state.getChallenge.challenges
     }

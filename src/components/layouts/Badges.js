@@ -1,7 +1,8 @@
 import React from 'react';
 
 function Badges(props){
-    const {badgeDetail} = props
+    // badge detail to be taken from database
+    // const {badgeDetail} = props
     var temp_badgeDetail = {
         badge_name:"Python",
         stars: 5,

@@ -8,14 +8,14 @@ import { connect } from 'react-redux';
 
 function Navbar(props){
     const baseColor = "blue";
-    const { authError,auth} = props;
+    const { auth } = props;
     
     
     if (!auth.uid){
         return (
             <nav className={"nav-wrapper "+baseColor+" darken-3"}>
                 <div className="container">
-                    <Link to="/" className="brand-logo" style={{"display":"flex"}}> <img src={siteLogo} height="58" width="58"/><span style={{"fontFamily":"Julius Sans One","fontSize":"25px"}}> AptiStamper</span></Link>
+                    <Link to="/" className="brand-logo" style={{"display":"flex"}}> <img src={siteLogo} height="58" width="58" alt="site-logo"/><span style={{"fontFamily":"Julius Sans One","fontSize":"25px"}}> AptiStamper</span></Link>
                     {}
                     <SignedOutLinks baseColor={baseColor}/>
                     {/*<SignedInLinks baseColor={baseColor}/>*/}
@@ -26,7 +26,7 @@ function Navbar(props){
         return (
             <nav className={"nav-wrapper "+baseColor+" darken-3"}>
                 <div className="container">
-                    <Link to="/" className="brand-logo" style={{"display":"flex"}}> <img src={siteLogo} height="58" width="58"/><span style={{"fontFamily":"Julius Sans One","fontSize":"25px"}}> AptiStamper</span></Link>
+                    <Link to="/" className="brand-logo" style={{"display":"flex"}}> <img src={siteLogo} height="58" width="58" alt="site-logo"/><span style={{"fontFamily":"Julius Sans One","fontSize":"25px"}}> AptiStamper</span></Link>
                     {}
                     {/* <SignedOutLinks baseColor={baseColor}/> */}
                     <SignedInLinks baseColor={baseColor} authData={auth}/>

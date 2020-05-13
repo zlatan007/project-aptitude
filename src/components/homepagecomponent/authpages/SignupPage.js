@@ -1,6 +1,4 @@
 import React,{Component} from 'react';
-// import './modal.css'
-import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 import facebook from '../../../images/facebook.png';
 import google from '../../../images/google.png';
@@ -9,7 +7,6 @@ import github from '../../../images/github.png';
 import { connect } from 'react-redux'
 import '../../../styles/LoginPage.css'
 import { signUp } from '../../../store/actions/authActions'
-// import {Homepage} from '../../Homepage-component/Homepage'
 import {Redirect} from 'react-router-dom';
 
 

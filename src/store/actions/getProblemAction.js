@@ -1,8 +1,6 @@
 export const getProblem = (slug) => {
     var collection_id = slug.slice(0,1)
     var document_id = slug.slice(1,3)
-    var problem_id = slug
-    // console.log(collection_id, document_id, problem_id)
     var collection = '';
     var document = '';
     switch(collection_id){
@@ -25,7 +23,7 @@ export const getProblem = (slug) => {
             collection = null
     }
 
-    if(collection_id == '1'){
+    if(collection_id === '1'){
         switch(document_id){
             case '01':
                 document = "AnalyticalReasoning";
@@ -61,7 +59,7 @@ export const getProblem = (slug) => {
                 document = null;
         }
     }
-    else if(collection_id == '2'){
+    else if(collection_id === '2'){
         switch(document_id){
             case '01':
                 document = "BarCharts";
@@ -79,7 +77,7 @@ export const getProblem = (slug) => {
                 document = null;
         }
     }
-    else if(collection_id == '3'){
+    else if(collection_id === '3'){
         switch(document_id){
             case '01':
                 document = "AlphabetTest";
@@ -140,7 +138,7 @@ export const getProblem = (slug) => {
         }
         
     }
-    else if(collection_id == '4'){
+    else if(collection_id === '4'){
         switch(document_id){
             case '01':
                 document = "AlligationOrMixture";
@@ -245,7 +243,7 @@ export const getProblem = (slug) => {
                 document = null;
         }        
     }
-    else if(collection_id == '5'){
+    else if(collection_id === '5'){
         switch(document_id){
             case '01':
                 document = "CauseAndEffectReasoning";
