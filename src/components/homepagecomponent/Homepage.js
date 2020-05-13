@@ -4,12 +4,9 @@ import Frontmain from './frontmaincomponent/Frontmain'
 class Homepage extends Component{
     render(){
         return(
-            
-                <div>
+            <div>
                 <Frontmain />
-                </div>
-            
-            
+            </div>
         )
     }
 }
