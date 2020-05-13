@@ -27,8 +27,6 @@ function ChallengeProblemPage(props){
         collection: problemInfo.collection,
         doc: problemInfo.document
     }])
-    // const aa = useSelector(state  => state.firestore.data[problemInfo.collection])
-    // console.log(aa)
 
     useEffect(() => {
         let el = document.querySelector('.tabs');
