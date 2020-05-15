@@ -10,9 +10,8 @@ import SignupPage from './components/homepagecomponent/authpages/SignupPage'
 
 import Dashboard from './components/dashboard/Dashboard';
 import Leaderboard from './components/leaderboard/Leaderboard';
-import Domain from './components/domains/Domain';
-import ChallengeRedirect from './components/layouts/ChallengeRedirect';
-import ChallengeProblemPage from './components/layouts/ChallengeProblemPage';
+import DomainPage from './components/domains/DomainPage';
+import SubDomainPage from './components/domains/SubDomainPage';
 import PageNotFound from './components/layouts/PageNotFound';
 
 function App() {
@@ -28,9 +27,10 @@ function App() {
           <Route path="/leaderboard" component={Leaderboard}/>
           <Route exact path="/login" component={LoginPage}/>
           <Route exact path="/signup" component={SignupPage}/>
-          <Route path="/domain/:domain_name" component={Domain} />
-          <Route path="/challenge/:challenge_slug/problem" component={ChallengeProblemPage} />
-          <Route path="/challenge/:challenge_slug" component={ChallengeRedirect} />
+          <Route exact path="/domain/:domain_name" component={DomainPage} />
+          <Route path="/domain/:domain_name/:subdomain_name" component={SubDomainPage} />
+          {/* <Route path="/challenge/:challenge_slug/problem" component={ChallengeProblemPage} /> */}
+          {/* <Route path="/challenge/:challenge_slug" component={ChallengeRedirect} /> */}
           <Route exact path='*' component={PageNotFound} />
         </Switch>
       </div>

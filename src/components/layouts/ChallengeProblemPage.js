@@ -7,7 +7,7 @@ import {getProblem} from '../../store/actions/getProblemAction';
 import { useFirestoreConnect } from 'react-redux-firebase';
 
 function ChallengeProblemPage(props){
-    console.log(window.location.pathname.split('/')[2]);
+    // console.log(window.location.pathname.split('/')[2]);
     const problemInfo = getProblem(window.location.pathname.split('/')[2])
 
     const [loading, setloading] = useState(true)
@@ -28,11 +28,11 @@ function ChallengeProblemPage(props){
         doc: problemInfo.document
     }])
 
-    useEffect(() => {
-        let el = document.querySelector('.tabs');
-        var instance = M.Tabs.init(el, {});
+    // useEffect(() => {
+    //     let el = document.querySelector('.tabs');
+    //     var instance = M.Tabs.init(el, {});
         
-    }, [])
+    // }, [])
 
     return (
         <div>
