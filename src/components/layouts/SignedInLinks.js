@@ -35,18 +35,18 @@ function SignedInLinks(props){
             <li><div className="center"><NavLink className="btn-large btn-floating pink lighten-1 waves-effect center" to="/">AK</NavLink></div></li>
             <li><h5 className="center">Anand Kumar</h5></li>
             <li><br></br></li>
-            <li><NavLink to='/dashboard'>Practice</NavLink></li>
+            <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
             <li><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
             <li><NavLink to='#'>Notifications</NavLink></li>
             <li><NavLink to='#'>Profile</NavLink></li>
             <li><NavLink to='#'>Log Out</NavLink></li>
         </ul>
         {/* <ul className="left hide-on-med-and-down">
-            <li><NavLink to='/'>Practice</NavLink></li>
+            <li><NavLink to='/'>Dashboard</NavLink></li>
             <li><NavLink to='/'>Leaderboard</NavLink></li>
         </ul> */}
         <ul className="right hide-on-med-and-down">
-            <li>
+            {/* <li>
                 <nav className="z-depth-0">
                     <div className={"nav-wrapper "+baseColor+" darken-2 "}>
                         <form>
@@ -58,8 +58,8 @@ function SignedInLinks(props){
                         </form>
                     </div>
                 </nav>
-            </li>
-            <li><NavLink to='/dashboard'>Practice</NavLink></li>
+            </li> */}
+            <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
             <li><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
             <li><NavLink to='#'>Notifications</NavLink></li>
             <li><NavLink className="dropdown-trigger btn btn-floating pink lighten-1" to="/" data-target="profile-dropdown">{authData.email.toString().slice(0,1)}<i className="material-icons right">arrow_drop_down</i></NavLink></li>

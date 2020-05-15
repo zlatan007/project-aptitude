@@ -24,7 +24,7 @@ function ChallengeTile(props){
                 <div className="card-content row" >
                     <div className="col s12 m12">
                         <p className="card-title"><b>Question: </b></p>
-                        <p className="black-text">{challengeDetail.question_text}</p>
+                        <p className="black-text" dangerouslySetInnerHTML={{__html:challengeDetail.question_html}}></p>
                     </div>
                     <div className="col s12 m12" style={{marginTop: 50}}>
                         <ul className="collection">

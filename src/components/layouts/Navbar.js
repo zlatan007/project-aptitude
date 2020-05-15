@@ -24,14 +24,14 @@ function Navbar(props){
         )
     }else{
         return (
+            <div class="navbar-fixed">
             <nav className={"nav-wrapper "+baseColor+" darken-3"}>
                 <div className="container">
                     <Link to="/" className="brand-logo" style={{"display":"flex"}}> <img src={siteLogo} height="58" width="58" alt="site-logo"/><span style={{"fontFamily":"Julius Sans One","fontSize":"25px"}}> AptiStamper</span></Link>
-                    {}
-                    {/* <SignedOutLinks baseColor={baseColor}/> */}
                     <SignedInLinks baseColor={baseColor} authData={auth}/>
                 </div>
             </nav>
+            </div>
         )
     }
 }

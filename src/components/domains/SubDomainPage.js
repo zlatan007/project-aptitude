@@ -1,6 +1,6 @@
 import React from 'react';
 import ChallengePane from '../layouts/ChallengePane';
-import FilterPane from '../layouts/FilterPane';
+import SidePane from '../layouts/SidePane';
 import Header from '../layouts/Header';
 
 function SubDomainPage(props){
@@ -12,7 +12,7 @@ function SubDomainPage(props){
             <div className="container">
                 <div className="row">
                     <ChallengePane />
-                    <FilterPane/>
+                    <SidePane/>
                 </div>
             </div>
         </div>

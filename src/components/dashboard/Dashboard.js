@@ -11,7 +11,7 @@ import {Redirect} from 'react-router-dom';
 function Dashboard(props) {
     var {prev_location} = props;
     prev_location===undefined ? prev_location = "" : prev_location = prev_location; // eslint-disable-line no-self-assign
-    const pageLoc = prev_location+"Practice";
+    const pageLoc = prev_location+"Dashboard";
     const pageName = "Dashboard";
 
     const { auth  } = props;
@@ -24,17 +24,17 @@ function Dashboard(props) {
                 <Header pageLoc={pageLoc} pageName={pageName}/>
                 <div className="container">
                     <div className="row">
-                        <h6><b>Your Skills</b></h6>
+                        <h6><b>Test</b></h6>
                         <SkillList />
                     </div>
                     <div className="row">
                         <br></br>
-                        <h6><b>Skills Available For Practice</b></h6>
+                        <h6><b>Practice</b></h6>
                         <br></br>
                         <DomainsList/>
                     </div>
                     <div className="row">
-                        <h6><b>Tutorials</b></h6>
+                        <h6><b>Learn</b></h6>
                         <br></br>
                         <TutorialList/>
                     </div>
