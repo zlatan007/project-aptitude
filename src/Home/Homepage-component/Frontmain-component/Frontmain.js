@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Coolimages from '../../../images/coolimage1.gif'
+// import Coolimages from '../../../images/coolimage1.gif'
 
 
 
-class Mainfront extends Component{
+class Frontmain extends Component{
     render(){
         return(
            <div className="row">
@@ -19,4 +19,4 @@ class Mainfront extends Component{
 }
 
 
-export default Mainfront
+export default Frontmain
