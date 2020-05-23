@@ -1,0 +1,39 @@
+/* .card{
+    height:40px !important;
+    width:120px !important;
+} */
+
+ /* .level{
+    height: 150px !important;
+    width: 300px !important;
+}  */
+
+.sizing{
+    /* height:170px !important; */
+    background-color: blueviolet !important;
+    padding-right: 2rem !important;
+    padding-left: 2rem !important; 
+}
+
+/* .sizing{
+   padding: 0 !important;
+   margin-top: 3rem;
+   padding-right: 2rem !important;
+   padding-left: 2rem !important;
+} */
+
+.tests{
+   text-align:center !important;
+   display: block !important; 
+   margin-left: auto !important;
+   margin-right: auto !important;
+   /* min-height: max-content !important; */
+   height: 5% !important;
+   width: 30% !important;
+}
+
+.foot{
+   text-align: center;
+   font-size: 1.5rem;
+   font-weight: 500;
+}
