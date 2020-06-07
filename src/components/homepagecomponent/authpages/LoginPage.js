@@ -63,9 +63,7 @@ class LoginPage extends Component{
 
                       <div className="col s6 ">
                         {/* <div className="right-align"> */}
-                          <a href="/" className="sized">
-                            Forgot your password?
-                          </a>
+                          
                         {/* </div> */}
                       </div>
                     

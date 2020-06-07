@@ -37,7 +37,7 @@ class SignupPage extends Component{
     {
      const { auth,authError } = this.props
 
-     if(auth.uid) return <Redirect to= "/dash" />
+    //  if(auth.uid) return <Redirect to= "/dash" />
 
      if(auth.uid) return <Redirect to= "/dashboard" />
 
@@ -77,42 +77,13 @@ class SignupPage extends Component{
 
                     <div className="row valign-wrapper" style={{"marginTop":"30px"}}>
 
-                        <div className="col s4 hide-on-small-and-down ">
-                          <hr></hr>
-                        </div>
-
-                        <div className="col s4 center">
-                          or connect with
-                        </div>
-
-                        <div className="col s4 hide-on-small-and-down ">
-                          <hr></hr>
-                        </div>
+                        
                       </div>
                     
-                        <div className="col s3">
-                          <div className="center">
-                            <img className="materialboxed"  length="44" width="44" src={facebook} alt="this is good" />
-                          </div>
-                        </div>
 
-                        <div className="col s3">
-                          <div className="center">
-                            <img className="materialboxed"  length="44" width="44" src={google} alt="this is good" />
-                          </div>
-                        </div>
 
-                        <div className="col s3">
-                          <div className="center">
-                            <img className="materialboxed"  length="44" width="44" src={linkdln} alt="this is good" />
-                          </div>
-                        </div>
-
-                        <div className="col s3">
-                          <div className="center">
-                            <img className="materialboxed"  length="44" width="44" src={github} alt="this is good" />
-                          </div>
-                        </div>
+                        
+                        
 
                         <div className="red-text center">
                           {authError ? <p>{authError}</p>: null}
